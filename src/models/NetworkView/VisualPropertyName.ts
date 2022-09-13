@@ -7,5 +7,5 @@ export type VisualPropertyName =
   | 'labelSize'
   | 'labelOpacity'
 
-export type NodeVisualPropertyName = VisualPropertyName | 'shape' | 'height'
+export type NodeVisualPropertyName = VisualPropertyName | 'shape' | 'height' | 'position'
 export type EdgeVisualPropertyName = VisualPropertyName | 'lineType'

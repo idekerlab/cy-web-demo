@@ -9,6 +9,12 @@ export interface NetworkViewerProps {
   networkView: NetworkView | null
 }
 
+/**
+ * Renderer component. Simply use key-value pair in the networkView object
+ * 
+ * @param props 
+ * @returns 
+ */
 export const NetworkRenderer = (props: NetworkViewerProps) => {
 
   const appContext = useContext(AppContext)
@@ -32,9 +38,10 @@ export const NetworkRenderer = (props: NetworkViewerProps) => {
 
   }, [networkView])
 
+  // TODO: replaced to real renderer (Cytoscape.js)
   return (
     <div>
-      Current App State is: {JSON.stringify(appContext)}
+      Initial App State is: {JSON.stringify(appContext)}
     </div>
   )
 

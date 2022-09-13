@@ -15,10 +15,15 @@ export abstract class Network {
     this._model = model
   }
   
+  getNodes = (): Node[] => (this._model.nodes)
+  getEdges = (): Edge[] => (this._model.edges)
+
   addNodes = (nodes: Node[]): void => {}
   deleteNodes = (nodes: Node[]): void => {}
 
   addEdges = (edges: Edge[]): void => {}
   deleteEdges = (edges: Edge[]): void => {}
+
+  // Utility functions
 
 }
