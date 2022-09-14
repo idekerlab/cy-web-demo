@@ -1,8 +1,8 @@
 import { Row } from "../Table/Row"
 
 export interface GraphObject {
-  readonly id: BigInt
+  readonly id: string
 
-  // Returns all attribute values associated with this node/edge
+  // Returns all attribute values associated with this node/edge as Row
   getAttributes: () => Row
 }

@@ -1,6 +1,6 @@
 import { RowData } from './RowData'
 
 export interface Row {
-  readonly key: BigInt
+  readonly key: string
   data: RowData
 }

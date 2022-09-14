@@ -23,7 +23,7 @@ export const apply = (view: NetworkView, style: VisualStyle): void => {
 
 export const applyLayout = (
   view: NetworkView,
-  positions: { key: BigInt; position: Position },
+  positions: { key: string; position: Position },
 ): void => {
   view.nodeViews.forEach((nodeView: View) => {
     // Set position here

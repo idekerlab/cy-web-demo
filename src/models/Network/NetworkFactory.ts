@@ -10,19 +10,8 @@ export class NetworkFactory {
    * @param id
    * @returns
    */
-  static createNetwork(id: BigInt): Network {
-    const attr: Row = {
-      key: id,
-      data: {},
-    }
-    const model: NetworkModel = {
-      id,
-      attributes: attr,
-      nodes: [],
-      edges: [],
-    }
-
-    return new CyjsNetwork(model)
+  static createNetwork(id: string): Network {
+    return new CyjsNetwork(id)
   }
 
   // Add more useful factory methods here. e.g. createNetworkFromCyjsJson()
@@ -31,8 +20,8 @@ export class NetworkFactory {
   static createNetworkFromCx(cx: []): Network {
     // TODO: cx->model
 
-    // UUID to BigInt
-    const id = BigInt(0)
+    // UUID to string
+    const id = 'fromUUID'
     const attr: Row = {
       key: id,
       data: {},
@@ -44,6 +33,6 @@ export class NetworkFactory {
       edges: [],
     }
 
-    return new CyjsNetwork(model)
+    return new CyjsNetwork(id)
   }
 }

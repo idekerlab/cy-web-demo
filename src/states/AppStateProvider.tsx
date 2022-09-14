@@ -1,12 +1,11 @@
 import { Context, createContext, FC, ReactNode, useReducer } from 'react'
-import { TableFactory } from '../models/Table/TableFactory'
 import { ApplicationState } from './ApplicationState'
 
 const initialState: ApplicationState = {
   network: null,
-  networkAttributes: TableFactory.createTable('Network Table'),
-  nodeTable: TableFactory.createTable('Node Table'),
-  edgeTable: TableFactory.createTable('Edge Table'),
+  networkAttributes: null,
+  nodeTable: null,
+  edgeTable: null,
   networkView: null,
   visualStyle: null,
 }
